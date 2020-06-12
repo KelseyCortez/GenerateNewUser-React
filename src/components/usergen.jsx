@@ -15,7 +15,7 @@ export default class Card extends Component {
         fetch('https://randomuser.me/api/')
             .then(res => res.json())
             .then(responseData => {
-                const result = responseData.result[0];
+                const result = responseData.results[0];
                 this.setState({
                     name: result.name.first + ' ' + result.name.last,
                     img: result.picture.large,
